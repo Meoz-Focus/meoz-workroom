@@ -1,0 +1,13 @@
+Meoz Workroom
+Copyright 2026 Meoz-Focus contributors
+Original project: https://github.com/Meoz-Focus/meoz-workroom
+Live experience: https://meoz.ai/workroom
+
+This software includes Meoz Workroom, developed by Meoz-Focus contributors.
+Preserve this attribution when distributing this work or derivative works,
+as required by section 4(d) of the Apache License, Version 2.0.
+
+Reference and upstream inspiration: web-ocean by Maksymilian Dendura
+https://github.com/Noniv/web-ocean
+Studied commit: a07c7fd522ef0a897601c114f927a49d93d95520
+See THIRD_PARTY_NOTICES.md for its MIT license.

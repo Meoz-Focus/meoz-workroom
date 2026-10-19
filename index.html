@@ -1,0 +1,67 @@
+<!doctype html>
+<!--
+Copyright 2026 Meoz-Focus contributors
+SPDX-License-Identifier: Apache-2.0
+Source: https://github.com/Meoz-Focus/meoz-workroom
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#24241e"><meta name="description" content="Step into Meoz Workroom. A warm desk, a little blue companion, and room for your next big idea. Meet Meoz, your focus companion for Mac.">
+<title>Meoz Workroom — A little company. A little more focus.</title>
+<link rel="canonical" href="https://meoz.ai/workroom">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Meoz Workroom — A little company. A little more focus.">
+<meta property="og:description" content="A warm desk, a little blue companion, and room for your next big idea. Meet Meoz, your focus companion for Mac.">
+<meta property="og:url" content="https://meoz.ai/workroom">
+<meta property="og:image" content="https://meoz.ai/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" sizes="32x32" href="meoz-app-32.png">
+<link rel="icon" type="image/svg+xml" sizes="any" href="meoz-app-icon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="meoz-app-180.png">
+<style>
+:root{color-scheme:dark;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#f6f2e8;background:#292922;font-synthesis:none}*{box-sizing:border-box}body{margin:0;overflow:hidden}button,input,select{font:inherit}button,a,input,select{-webkit-tap-highlight-color:transparent}button{color:inherit;cursor:pointer}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid #bcd5a2;outline-offset:5px}canvas#scene{position:fixed;inset:0;width:100%;height:100%;cursor:grab;touch-action:none}canvas#scene:active{cursor:grabbing}.veil{position:fixed;inset:0;pointer-events:none;background:linear-gradient(180deg,#17191280,transparent 28%,transparent 65%,#151813b0)}header{position:fixed;top:0;left:0;right:0;padding:30px 38px;display:flex;align-items:center;justify-content:space-between;pointer-events:none}.brand{display:flex;align-items:center;gap:12px;font-size:23px;letter-spacing:-1px;font-weight:600}.brand svg{width:31px;height:31px}.brand span:last-child{font-size:11px;letter-spacing:2.5px;font-weight:400;opacity:.65;border-left:1px solid #ffffff40;margin-left:8px;padding-left:20px}.meta{display:flex;gap:10px;align-items:center;font-size:10px;letter-spacing:1.6px;color:#e6eadad0}.live-dot{height:5px;width:5px;background:#c6d8a5;border-radius:50%;box-shadow:0 0 10px #d5e5b055}.intro{position:fixed;top:120px;left:40px;pointer-events:none;max-width:390px}.eyebrow{font-size:10px;letter-spacing:2.6px;text-transform:uppercase;color:#e2e3c9b5}.intro h1{font:400 clamp(30px,3.1vw,48px)/1.12 Georgia,"Times New Roman",serif;letter-spacing:-1.5px;margin:18px 0;color:#f8f1e4}.intro p{font-size:12px;line-height:1.8;color:#eeeee0a6;max-width:240px;margin-top:15px}.intro .index{margin-top:24px;font:10px ui-monospace,monospace;color:#eeeee070;letter-spacing:1px}.bottom{position:fixed;bottom:28px;left:34px;right:34px;display:flex;align-items:end;justify-content:space-between;gap:20px;pointer-events:none}.caption{width:240px;font-size:10px;line-height:1.9;color:#e7e9d5a6;letter-spacing:.3px}.caption b{font-weight:400;display:block;letter-spacing:1.7px;color:#f4f3e3d9;font-size:10px}.toolbar{pointer-events:auto;display:flex;align-items:center;gap:4px;padding:6px;border:1px solid #f6f4da25;border-radius:100px;background:#20251eb8;backdrop-filter:blur(24px);box-shadow:0 10px 40px #12150d22}.toolbar button{border:0;border-radius:100px;background:transparent;padding:12px 18px;font-size:11px;white-space:nowrap;color:#eeeeD4a0;transition:background .2s,color .2s}.toolbar button:hover{background:#ffffff10;color:#fff}.toolbar button[aria-pressed=true]{background:#e2e7cc;color:#263226}.separator{width:1px;height:19px;background:#ffffff22;margin:0 4px}.toolbar .icon{padding:10px;display:grid;place-items:center;width:38px;height:38px}.icon svg{height:16px;width:16px;stroke:currentColor;fill:none;stroke-width:1.4}.right-info{width:240px;text-align:right;font-size:10px;color:#e8e8d099;line-height:1.9;pointer-events:auto}.right-info a{color:inherit;text-underline-offset:3px}.key{display:inline-block;border:1px solid #ffffff30;border-radius:3px;padding:0 5px;font-size:9px;margin-left:6px}.panel{position:fixed;bottom:99px;right:34px;width:278px;padding:24px;border:1px solid #eeefd828;border-radius:17px;background:#20251eea;backdrop-filter:blur(30px);box-shadow:0 16px 80px #0003}.panel[hidden]{display:none}.panel h2{font-size:15px;font-weight:500;margin:0 0 22px;letter-spacing:-.3px}.panel label{display:flex;justify-content:space-between;font-size:11px;color:#dde2cc;margin:19px 0 11px}.panel output{color:#adb49c;font-variant-numeric:tabular-nums}.panel input[type=range]{width:100%;height:3px;accent-color:#c0d5a4;cursor:pointer}.panel select{width:100%;padding:10px;border:1px solid #ffffff20;background:#333b2f;border-radius:6px;color:#eceede;font-size:11px}.panel p{font-size:10px;line-height:1.6;color:#c5cbb590;margin-top:20px}.panel .close{position:absolute;right:16px;top:17px;border:0;background:transparent;color:#abb39b;font-size:19px}.panel .statline{border-top:1px solid #ffffff17;padding-top:16px;font:9px/1.8 ui-monospace,monospace;color:#b5c09c}.loading{position:fixed;inset:0;background:#252a23;display:flex;align-items:center;justify-content:center;z-index:10;transition:opacity .8s}.loading.done{opacity:0;pointer-events:none}.load-content{width:275px;text-align:center}.load-content svg{width:65px;height:65px;margin-bottom:28px}.load-content h2{font:normal 30px Georgia,serif;letter-spacing:-1px;margin:0 0 16px}.load-content p{font-size:11px;color:#b4bba8;letter-spacing:.5px}.progress{height:1px;background:#ffffff17;margin:27px 25px}.progress div{height:100%;width:0;background:#c0d1a8;transition:width .4s}.error{position:fixed;inset:0;z-index:20;background:#252a23;display:grid;place-content:center;padding:40px;text-align:center}.error[hidden]{display:none}.error h2{font:30px Georgia,serif}.error p{max-width:460px;font-size:14px;line-height:1.8;color:#c4cbb6}.error button{padding:13px 20px;background:#d7e3c5;color:#273525;border:0;border-radius:9px;justify-self:center}.toast{position:fixed;bottom:105px;left:50%;transform:translateX(-50%);padding:12px 20px;background:#242c22e8;border:1px solid #ffffff25;backdrop-filter:blur(15px);border-radius:8px;font-size:12px;z-index:15}.toast[hidden]{display:none}body.clean header,body.clean .intro,body.clean .bottom,body.clean .panel,body.clean .veil{display:none}.restore{display:none;position:fixed;bottom:20px;right:20px;border:1px solid #ffffff40;background:#20291dbb;padding:10px;border-radius:8px;font-size:10px}body.clean .restore{display:block}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(max-width:850px){header{padding:23px}.intro{left:25px;top:100px}.intro h1{font-size:34px}.intro p{max-width:180px}.bottom{left:20px;right:20px;bottom:20px;justify-content:center}.caption,.right-info{display:none}.toolbar button{padding:11px 13px}.panel{right:20px;bottom:90px}.brand span:last-child{display:none}.meta{font-size:9px}.intro .index{display:none}}
+@media(max-width:500px){.intro h1{font-size:29px;margin-top:13px}.intro p{font-size:11px;max-width:160px}.intro{top:85px}.toolbar button{font-size:10px;padding:11px 10px}.toolbar .icon{width:33px}.meta span:last-child{display:none}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+body.closeup .intro{opacity:0;visibility:hidden}
+.toolbar .reset-view{border:1px solid #ffffff30;color:#f1f0df}
+.load-content .avatar{display:block;width:80px;height:80px;margin:0 auto 28px}
+.load-content .load-intro{font-size:12px;line-height:1.7;color:#e0e5d2;letter-spacing:0;margin:0 0 24px}
+.load-content .load-about{font-size:12px;line-height:1.7;letter-spacing:0;margin:0}
+.brand .avatar{width:35px;height:35px}
+.brand{pointer-events:auto;color:inherit;text-decoration:none;border-radius:7px;min-height:44px}
+.brand:hover{color:#fff}
+@media(max-width:650px) and (orientation:portrait){
+  /* Keep portrait framing compact, including when controls are hidden. */
+  canvas#scene{top:24vh;bottom:auto;height:62vh;max-height:134vw}
+  .veil{background:linear-gradient(180deg,#292922 24%,#29292200 37%,#29292200 71%,#292922 86%)}
+  body.clean canvas#scene{top:50%;transform:translateY(-50%)}
+}
+@media(max-width:500px){.toolbar{max-width:380px;flex-wrap:wrap;justify-content:center;border-radius:21px}.toolbar [data-view]{flex:1 0 22%;padding:10px 6px}.toolbar .separator{flex-basis:100%;height:0;margin:0}.toolbar .icon{width:40px;height:32px}.panel{bottom:140px}}
+</style>
+</head>
+<body>
+<canvas id="scene" aria-label="Interactive 3D scene of hands at a MacBook Pro beside a blue Meoz cat. Drag for a gentle orbit and scroll to zoom within the framed view. Use the view buttons for accessible camera presets, or Reset view to return to the workspace."></canvas>
+<div class="veil"></div>
+<header><a class="brand" href="https://meoz.ai/" aria-label="Meoz home"><img class="avatar" src="meoz-app-icon.svg" width="35" height="35" alt="">meoz<span>THE WORKROOM</span></a><div class="meta"><i class="live-dot"></i><span>WEBGPU · PATH TRACED</span><span id="samples">WARMING UP</span></div></header>
+<main class="intro"><span class="eyebrow">A study in quiet company</span><h1>Good work.<br>Better company.</h1><p>A warm desk. An open mind.<br>And a little friend by your side.</p><div class="index">STUDY 001 &nbsp; / &nbsp; MADE OF LIGHT</div></main>
+<footer class="bottom">
+<div class="caption"><b>A LITTLE ROOM TO FOCUS</b>Meet Meoz, your focus companion for Mac.<br>A little support for the work that matters.</div>
+<nav class="toolbar" aria-label="Scene controls">
+<button data-view="desk" aria-keyshortcuts="1" aria-pressed="true">Workspace</button>
+<button data-view="cat" aria-keyshortcuts="2" aria-pressed="false">Companion</button>
+<button data-view="detail" aria-keyshortcuts="3" aria-pressed="false">The details</button>
+<div class="separator"></div>
+<button class="reset-view" id="reset-view" aria-keyshortcuts="R" title="Reset to the default view (R)">Reset view</button>
+<button class="icon" id="settings" aria-label="Scene settings" aria-expanded="false"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 17h16M8 4v6m8 4v6"/></svg></button>
+<button class="icon" id="capture" aria-label="Save a picture of the scene"><svg viewBox="0 0 24 24"><path d="M8 5 6 8H3v12h18V8h-3l-2-3Z"/><circle cx="12" cy="13" r="4"/></svg></button>
+<button class="icon" id="hide" aria-label="Hide interface (H)"><svg viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg></button>
+</nav>
+<div class="right-info">Drag to look around · Scroll to zoom<br><span class="key">R</span> reset view <span class="key">H</span> hide UI<br><a href="https://github.com/Meoz-Focus/meoz-workroom" target="_blank" rel="noopener noreferrer">Made with Meoz Workroom ↗</a></div>
+</footer>
+<aside class="panel" id="panel" hidden aria-label="Scene settings"><button class="close" id="close-settings" aria-label="Close settings">×</button><h2>Make yourself at home.</h2><label for="warmth">Afternoon light <output id="warmth-value">78%</output></label><input id="warmth" type="range" min="0" max="100" value="78"><label for="exposure">Exposure <output id="exposure-value">1.00</output></label><input id="exposure" type="range" min="40" max="180" value="100"><label for="aperture">Depth of field <output id="aperture-value">Off</output></label><input id="aperture" type="range" min="0" max="100" value="0"><label for="quality">Render resolution</label><select id="quality"><option value="auto" selected>Auto · Match display</option><option value="0.65">Comfort · 65%</option><option value="0.85">Quick · 85%</option><option value="1">Fine · 100%</option><option value="1.5">Retina · 150%</option><option value="2">Retina · 200%</option></select><label for="motion">Gentle typing & breathing <input type="checkbox" id="motion" style="accent-color:#c0d5a4"></label><p>The image becomes clearer as light gathers. Moving the camera starts a fresh exposure.</p><div class="statline" id="scene-stats">Building procedural geometry…</div></aside>
+<div class="loading" id="loading"><div class="load-content"><img class="avatar" src="meoz-app-icon.svg" width="80" height="80" alt=""><h2>Meoz Workroom</h2><p class="load-intro">A little company. A little more focus.</p><p id="load-message" role="status">Opening the workroom…</p><div class="progress"><div id="progress"></div></div><p class="load-about">Meet Meoz, your focus companion for Mac.</p></div></div>
+<div class="error" id="error" hidden><h2>A little more graphics power.</h2><p id="error-message"></p><button onclick="location.reload()">Try again</button></div><div class="toast" id="toast" role="status" hidden></div><button class="restore" id="restore">Show controls · H</button>
+<script type="module" src="js/main.js"></script>
+</body></html>

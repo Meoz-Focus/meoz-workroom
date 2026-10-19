@@ -1,0 +1,17 @@
+{
+  "name": "meoz-workroom",
+  "version": "1.0.0",
+  "description": "A handcrafted WebGPU path-traced study of quiet work and a little company.",
+  "private": true,
+  "license": "Apache-2.0",
+  "repository": "github:Meoz-Focus/meoz-workroom",
+  "type": "module",
+  "scripts": {
+    "prestart": "node generate-icon.mjs",
+    "start": "node server.mjs",
+    "prebuild": "node generate-icon.mjs",
+    "build": "node build.mjs",
+    "test": "node --test tests/*.test.mjs"
+  },
+  "devDependencies": { "esbuild": "^0.25.0" }
+}

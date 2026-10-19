@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <linearGradient id="tileGrad" x1="25.60" y1="25.60" x2="486.40" y2="486.40" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#7d6bf5"/>
+      <stop offset="100%" stop-color="#ff8cb8"/>
+    </linearGradient>
+    <linearGradient id="sheen" x1="256.00" y1="25.60" x2="256.00" y2="256.00" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="tileClip">
+      <rect x="25.60" y="25.60" width="460.80" height="460.80" rx="103.08" ry="103.08"/>
+    </clipPath>
+    <filter id="headShadow" x="-20%" y="-20%" width="150%" height="150%">
+      <feDropShadow dx="0" dy="6.14" stdDeviation="12.80" flood-color="#331a4e" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+
+  <g clip-path="url(#tileClip)">
+    <rect x="25.60" y="25.60" width="460.80" height="460.80" fill="url(#tileGrad)"/>
+    <rect x="25.60" y="25.60" width="460.80" height="460.80" fill="url(#sheen)"/>
+
+    <g filter="url(#headShadow)">
+      <path d="M 228.35 173.77 Q 217.29 118.48 179.97 104.65 Q 134.35 137.83 145.41 193.13 Z" fill="#fff6eb"/>
+      <path d="M 283.65 173.77 Q 294.71 118.48 332.03 104.65 Q 377.65 137.83 366.59 193.13 Z" fill="#fff6eb"/>
+      <ellipse cx="256.00" cy="281.60" rx="146.53" ry="135.48" fill="#fff6eb"/>
+    </g>
+
+    <path d="M 209.00 165.48 Q 197.94 136.45 182.73 121.24 L 167.53 173.77 Z" fill="rgba(255, 143, 168, 0.55)"/>
+    <path d="M 303.00 165.48 Q 314.06 136.45 329.27 121.24 L 344.47 173.77 Z" fill="rgba(255, 143, 168, 0.55)"/>
+
+    <ellipse cx="226.97" cy="206.95" rx="53.91" ry="24.88" fill="rgba(255, 255, 255, 0.4)"/>
+
+    <ellipse cx="178.59" cy="320.31" rx="30.41" ry="19.35" fill="rgba(255, 140, 166, 0.65)"/>
+    <ellipse cx="333.41" cy="320.31" rx="30.41" ry="19.35" fill="rgba(255, 140, 166, 0.65)"/>
+
+    <!-- Left eye -->
+    <g>
+      <circle cx="197.94" cy="276.07" r="34.56" fill="#2b3047"/>
+      <ellipse cx="211.76" cy="263.63" rx="12.44" ry="12.44" fill="rgba(255, 255, 255, 0.97)"/>
+      <ellipse cx="183.08" cy="285.40" rx="5.18" ry="5.18" fill="rgba(255, 255, 255, 0.97)"/>
+    </g>
+
+    <!-- Right eye -->
+    <g>
+      <circle cx="314.06" cy="276.07" r="34.56" fill="#2b3047"/>
+      <ellipse cx="327.88" cy="263.63" rx="12.44" ry="12.44" fill="rgba(255, 255, 255, 0.97)"/>
+      <ellipse cx="299.20" cy="285.40" rx="5.18" ry="5.18" fill="rgba(255, 255, 255, 0.97)"/>
+    </g>
+
+    <path d="M 246.32 317.54 L 265.68 317.54 Q 256.00 327.22 256.00 329.98 Z" fill="#f79eb3"/>
+    <path d="M 231.12 328.60 Q 243.56 349.34 256.00 331.37 Q 268.44 349.34 280.88 328.60" fill="none" stroke="#d66680" stroke-width="7.60" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <path d="M 405.30 130.92 L 411.95 147.77 L 428.80 154.42 L 411.95 161.07 L 405.30 177.92 L 398.65 161.07 L 381.80 154.42 L 398.65 147.77 Z" fill="rgba(255, 255, 255, 0.95)"/>
+    <path d="M 441.24 200.04 L 444.76 208.96 L 453.68 212.48 L 444.76 216.00 L 441.24 224.92 L 437.72 216.00 L 428.80 212.48 L 437.72 208.96 Z" fill="rgba(255, 255, 255, 0.95)"/>
+  </g>
+</svg>
