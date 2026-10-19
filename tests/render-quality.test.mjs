@@ -24,7 +24,16 @@ test('large and ultrawide views retain their aspect ratio within the pixel budge
 
 test('orbit preview returns to full display density after interaction',()=>{
   const preview=renderSize(700,700,'auto',2,true),still=renderSize(700,700,'auto',2,false);
-  assert.equal(preview.width,455);assert.equal(still.width,1400);
+  assert.equal(preview.width,350);assert.equal(still.width,1400);
+});
+
+test('scroll preview has a bounded GPU pixel budget across large displays',()=>{
+  for(const [w,h] of [[1440,900],[2880,1800],[3840,2160],[7680,2160],[390,844]]){
+    const preview=renderSize(w,h,'auto',2,true);
+    assert.ok(preview.width*preview.height<=241_000);
+    assert.ok(Math.abs(preview.height-preview.width/(w/h))<=1);
+    assert.ok(renderSize(w,h,'auto',2,false).width>preview.width);
+  }
 });
 
 test('Retina presentation keeps screen text at native density at every trace quality',()=>{

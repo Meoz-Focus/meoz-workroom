@@ -15,7 +15,9 @@ export function presentationSize(width,height,dpr=1){
 export function renderSize(width,height,quality='auto',dpr=1,interacting=false){
   const requested=quality==='auto'?Math.min(Math.max(1,dpr),2):Number(quality);
   let scale=Number.isFinite(requested)&&requested>0?requested:1;
-  if(interacting)scale=Math.min(scale,.65);
+  // Keep camera motion inexpensive even on large/Retina windows. Still frames
+  // retain the full two-million-pixel budget and native-density presentation.
+  if(interacting)scale=Math.min(scale,.5,Math.sqrt(240_000/(width*height)));
   scale=Math.min(scale,2400/width,1800/height,Math.sqrt(2_000_000/(width*height)));
   return {width:Math.max(1,Math.round(width*scale)),height:Math.max(1,Math.round(height*scale)),scale};
 }

@@ -31,7 +31,9 @@ function resize(){
   const display=presentationSize(viewport.width,viewport.height,devicePixelRatio||1);
   if(w===state.width&&h===state.height&&display.width===state.displayWidth&&display.height===state.displayHeight)return;
   state.width=w;state.height=h;state.displayWidth=display.width;state.displayHeight=display.height;
-  canvas.width=display.width;canvas.height=display.height;
+  // Changing trace resolution must not reallocate the unchanged presentation.
+  if(canvas.width!==display.width)canvas.width=display.width;
+  if(canvas.height!==display.height)canvas.height=display.height;
   fitCamera();
   for(const t of [...accum,...filtered])t.destroy();guide?.destroy();albedo?.destroy();
   const usage=GPUTextureUsage.TEXTURE_BINDING|GPUTextureUsage.STORAGE_BINDING;
@@ -97,7 +99,14 @@ canvas.addEventListener('pointermove',e=>{
 });
 const endPointer=e=>{pointers.delete(e.pointerId);if(pointers.size===0){drag=null;state.interacting=false;resize();}else{const [x,y]=pointers.values().next().value;drag={x,y};}};canvas.addEventListener('pointerup',endPointer);canvas.addEventListener('pointercancel',endPointer);canvas.addEventListener('contextmenu',e=>e.preventDefault());
 let wheelEnd;
-canvas.addEventListener('wheel',e=>{e.preventDefault();if(!state.ready||!moveView({zoom:Math.exp(e.deltaY*.001)}))return;state.interacting=true;resize();reset();clearTimeout(wheelEnd);wheelEnd=setTimeout(()=>{state.interacting=false;resize();},200);},{passive:false});
+canvas.addEventListener('wheel',e=>{
+  e.preventDefault();if(!state.ready)return;
+  const changed=moveView({zoom:Math.exp(e.deltaY*.001)});
+  if(changed){if(!state.interacting){state.interacting=true;resize();}reset();}
+  // Momentum events at the zoom limit still belong to the current gesture.
+  // Avoid bouncing back to expensive still rendering between wheel bursts.
+  if(state.interacting){clearTimeout(wheelEnd);wheelEnd=setTimeout(()=>{if(pointers.size)return;state.interacting=false;resize();},450);}
+},{passive:false});
 document.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',()=>setView(b.dataset.view)));
 function resetView(){
   if(!state.ready)return;
